@@ -4,7 +4,7 @@ using namespace std;
 int main(){
     int p,r,t,i;
     cout<<"Enter the principal:";
-    cin>>p;
+    cin>> p;
     cout<<"\nEnter the time in years:";
     cin>>t;
     cout<<"\nEnter the rate:";

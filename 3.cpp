@@ -2,7 +2,6 @@
 #include<iostream>
 #include<math.h>
 using namespace std;
-int isperfect();
 int main(){
     int a;
     double b;

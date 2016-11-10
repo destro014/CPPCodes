@@ -6,8 +6,8 @@ using namespace std;
 int main() {
 
     float a, b, c, x1, x2, determinant, realPart, imaginaryPart;
-    cout << "Enter coefficients a, b and c: ";
-    cin >> a >> b >> c;
+    cout <<"Enter coefficients a, b and c: ";
+    cin >>a>>b>>c;
     determinant = b*b - 4*a*c;
 
     if (determinant > 0) {

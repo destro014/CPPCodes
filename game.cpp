@@ -5,13 +5,13 @@
 using namespace std;
 int main()
 {
-    srand(time(0));
     int i,x,a;
     int choice;
-    a=rand()%100;
     cout <<"\t\t\t   LET'S PLAY A GAME"<<endl;
     cout <<"\t\tCan you guess a number I am thinking of ??"<<endl;
-    A:cout<<"\n\n\t\t     Enter a number I am thinking of"<<endl;
+    A:srand(time(0));
+    a=rand()%100;
+    cout<<"\n\n\t\t     Enter a number I am thinking of"<<endl;
     for (i=0;i<5000;i++)
     {
         cout<<"\t\t\t\t   ";

@@ -1,0 +1,1 @@
+/*wap to display the count value of class. use multiple object to display value with the concept of static data*/

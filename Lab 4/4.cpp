@@ -17,7 +17,6 @@ public:
 class second{
     int b;
 public:
-    //int b;
     void input(){
         cout<<"Enter any number:";
         cin>>b;

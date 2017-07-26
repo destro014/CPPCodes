@@ -1,0 +1,48 @@
+//Create circle using mid point line algorithm
+
+#include<graphics.h>
+#include<math.h>
+#include<iostream.h>
+#include<conio.h>
+#include<dos.h>
+void midpointcircle(int x1,int y1,int maxX,int maxY, int r);
+void main(){
+	int x,y,maxX,maxY,r;
+	int gd=DETECT, gm;
+	initgraph(&gd,&gm,"C:\\TurboC3\\BGI");
+	cout<<endl<<"Radiusof a circle:";
+	cin>>r;
+	x=0;y=r;
+	maxX=getmaxx();
+	maxY=getmaxy();
+	midpointcircle(x,y,maxX,maxY,r);
+	getch();
+	closegraph();
+}
+void midpointcircle(int x1,int y1,int maxx,int maxy,int r){
+	int x,y,h;
+	h=1-r;
+	x=x1;
+	y=y1;
+	do{
+		putpixel(maxx/2+x,maxy/2+y,1);
+		putpixel(maxx/2+y,maxy/2+x,2);
+		putpixel(maxx/2+x,maxy/2-y,3);
+		putpixel(maxx/2+y,maxy/2-x,4);
+		putpixel(maxx/2-x,maxy/2-y,5);
+		putpixel(maxx/2-x,maxy/2+y,6);
+		putpixel(maxx/2-y,maxy/2+x,7);
+		putpixel(maxx/2-y,maxy/2-x,8);
+		
+		if (h<0){
+			//select e
+			h=h+2*x+3;
+		} 
+		else{
+			h=h+2*x-2*y+5;y--;
+		}
+		x++;
+		delay(20);
+	}
+	while(x<y);
+}
